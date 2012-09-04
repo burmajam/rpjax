@@ -1,5 +1,5 @@
 <%= content_for_workspace :flash do %>
-	<%= render :partial => '/layouts/flash' %>
+	<%= render :partial => '/layouts/flash', :locals => { :flash => flash } %>
 <% end %>
 
 <%= yield %>
