@@ -1,3 +1,6 @@
+//= require jquery.pjax
+//= require_self
+
 Rpjax =
   pjaxifyLinks: () ->
     $(document).on 'click', 'a[data-target-workspace]', (event) ->
@@ -34,3 +37,11 @@ Rpjax =
         $("div[data-workspace=#{target_workspace}]").html $("[data-content-for=#{target_workspace}]").html()
         $("[data-content-for=#{target_workspace}]").remove()
       )(part)
+
+jQuery ->
+  Rpjax.pjaxifyResponse()
+  Rpjax.pjaxifyLinks()
+  Rpjax.pjaxifyForms()
+
+  $(document).on "pjax:end", () ->
+    Rpjax.pjaxifyResponse()
