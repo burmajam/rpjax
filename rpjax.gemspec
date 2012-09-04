@@ -4,13 +4,13 @@ require File.expand_path('../lib/rpjax/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Milan Burmaja"]
   gem.email         = ["burmajam@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{pjax_rails extender}
+  gem.summary       = %q{pjax_rails extender}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
-  # gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  # gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "rpjax"
   gem.require_paths = ["lib"]
   gem.version       = Rpjax::VERSION
