@@ -1,3 +1,4 @@
+require "pjax_rails"
 require "rpjax/version"
 
 module Rpjax
