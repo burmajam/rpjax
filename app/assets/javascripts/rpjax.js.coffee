@@ -8,7 +8,7 @@ Rpjax =
       $.pjax.click event, container
 
   pjaxifyForms: () ->
-    $('form[data-target-workspace]').live 'submit', (event) ->
+    $('form[data-target-workspace]').on 'submit', (event) ->
       event.preventDefault()
       $.pjax
         container: "[data-workspace=#{$(this).data('target-workspace')}]"
